@@ -1,5 +1,5 @@
 {
-  "name": "breadcrumb",
+  "name": "react-breadcrumb-component",
   "version": "0.1.0",
   "main": "index.js",
   "dependencies": {
