@@ -1,6 +1,9 @@
 import React, {useState} from 'react';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
+import propTypes from 'prop-types';
+
+import './breadcrumb.css';
 
 function SeparatorView () {
   return (<span className="breadcrumb-item-separator"> &gt; </span>);
@@ -17,7 +20,7 @@ function BreadcrumbItemView ({id, label, onItemClick}) {
   );
 }
 
-export default function BreadcrumbView ({ items, onClick }) {
+function BreadcrumbView ({ items, onClick }) {
 
   const [anchorEl, setAnchorEl] = useState(null);
 
@@ -29,11 +32,15 @@ export default function BreadcrumbView ({ items, onClick }) {
 
 
   const onItemClick = (id) => {
-    //If onclick function is passed
-    if(onClick) {
-      onClick(id);
+    if(onClick){
+      if(onClick instanceof Function) {
+        onClick(id);
+      }
+      else {
+        throw Error("onClick is not a valid function");
+      }
     }
-    console.log(id);
+    handleClose();
   };
 
 
@@ -77,3 +84,17 @@ export default function BreadcrumbView ({ items, onClick }) {
       </div>
   )
 }
+
+const PropTypes = {
+  items: propTypes.arrayOf(
+      propTypes.shape({
+        id: propTypes.string,
+        label: propTypes.string
+      })
+  ).isRequired,
+  onClick: propTypes.func
+};
+
+BreadcrumbView.propTypes = PropTypes;
+
+export default BreadcrumbView;

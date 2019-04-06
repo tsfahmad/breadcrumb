@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 import BreadcrumbView from './views/breadcrumb-view';
 
 const BreadcrumbData = [
