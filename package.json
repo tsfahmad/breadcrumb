@@ -1,7 +1,7 @@
 {
   "name": "breadcrumb",
   "version": "0.1.0",
-  "private": true,
+  "main": "index.js",
   "dependencies": {
     "@material-ui/core": "^3.9.3",
     "prop-types": "^15.7.2",
