@@ -1,7 +1,7 @@
 {
   "name": "react-breadcrumb-component",
   "homepage": "https://github.com/tsfahmad/breadcrumb/tree/add-license-1#readme",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "license": "MIT",
   "main": "dist/index.js",
   "scripts": {
@@ -9,8 +9,10 @@
     "transpile": "babel src -d dist --copy-files",
     "prepublishOnly": "npm run transpile"
   },
+  "dependencies": {
+    "@material-ui/core": "^3.9.3"
+  },
   "peerDependencies": {
-    "@material-ui/core": "^3.9.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
