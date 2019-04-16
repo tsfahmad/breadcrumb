@@ -1,7 +1,7 @@
 {
   "name": "react-breadcrumb-component",
   "homepage": "https://github.com/tsfahmad/breadcrumb/tree/add-license-1#readme",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "license": "MIT",
   "main": "dist/index.js",
   "scripts": {
@@ -36,5 +36,8 @@
     "webpack": "^4.30.0",
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.3.1"
+  },
+  "bugs": {
+    "url": "https://github.com/tsfahmad/breadcrumb/issues"
   }
 }
